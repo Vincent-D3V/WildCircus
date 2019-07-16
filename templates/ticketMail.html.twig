@@ -1,0 +1,42 @@
+<body style="text-align: center">
+
+<h1>
+    Récapitulatif de votre commande:
+</h1>
+
+<h3>
+    Nom : {{ data.firstName }}
+    Prenom : {{ data.lastName }}
+</h3>
+
+<h3>
+    Numéro du ticket:
+</h3>
+
+<h5>
+    Lieux du spectacle: {{ data.showPlace }}
+</h5>
+
+<h5>
+    Date du spectacle: {{ data.showDate|date("d/m/Y") }}
+</h5>
+
+{% if data.age1 == 1 %}
+    <h5>
+        Prix: 5$
+    </h5>
+{% endif %}
+
+{% if data.age2 == 1 %}
+    <h5>
+        Prix: 10$
+    </h5>
+{% endif %}
+
+{% if data.age3 == 1 %}
+    <h5>
+        Prix: 15$
+    </h5>
+{% endif %}
+
+<a href="https://paypal.com">Payé</a>

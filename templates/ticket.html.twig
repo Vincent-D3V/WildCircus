@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <img src="https://www.royalcanadiancircus.ca/wp-content/uploads/2015/01/ticket_stub.png" alt="buyTicket" style="display: block; margin-left: auto; margin-right: auto; width: 300px; height: 150px; margin-bottom: 100px; margin-top: 100px;">
+{{ form_start(ticketForm) }}
+    {{ form_errors(ticketForm) }}
+    {{ form_row(ticketForm.firstName) }}
+    {{ form_row(ticketForm.lastName) }}
+    {{ form_row(ticketForm.email) }}
+    {{ form_row(ticketForm.age1) }}
+    {{ form_row(ticketForm.age2) }}
+    {{ form_row(ticketForm.age3) }}
+    {{ form_row(ticketForm.showPlace) }}
+    {{ form_row(ticketForm.showDate) }}
+    <button style="display: flex; justify-content: center;" class="btn btn-outline-success" type="submit">Envoyé</button>
+    {{ form_end(ticketForm) }}
+{% endblock %}
