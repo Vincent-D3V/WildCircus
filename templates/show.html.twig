@@ -11,7 +11,7 @@
             {% for show in shows %}
             <td>{{ show.place }}</td>
             <td>{{ show.date|date("d/m/Y") }}</td>
-            <td><a href="/ticket/{{ show.id }}"><button class="btn btn-success">Achetez</button></a></td>
+            <td><a href="/ticket/{{ show.id }}"><button class="btn btn-success">Achetez ma place</button></a></td>
             {% endfor %}
         </tr>
         </tbody>
