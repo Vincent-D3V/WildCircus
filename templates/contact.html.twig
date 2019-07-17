@@ -1,11 +1,23 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    <img src="https://cirquestarlight.ch/wp-content/uploads/2018/02/ti_contact.png" alt="contact" style="display: block; margin-left: auto; margin-right: auto; width: 300px; height: 150px; margin-bottom: 100px; margin-top: 100px; background-color: crimson;">
+    <img src="https://cirquestarlight.ch/wp-content/uploads/2018/02/ti_contact.png" alt="contact" style="display: block; margin-left: auto; margin-right: auto; width: 300px; height: 150px; margin-bottom: 100px; margin-top: 100px;">
+    <div style="background-color: #1b1e21">
+        {% for category, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
     {{ form_start(contactForm) }}
     {{ form_errors(contactForm) }}
     {{ form_row(contactForm.name) }}
     {{ form_row(contactForm.email) }}
     {{ form_row(contactForm.message) }}
-        <button style="display: flex; justify-content: center;" class="btn btn-outline-success" type="submit">Envoyé</button>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button class="btn btn-success" type="submit">Envoyé</button>
+    </div>
+
     {{ form_end(contactForm) }}
 {% endblock %}

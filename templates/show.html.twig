@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <img src="https://www.doitinparis.com/files/2019/culture/sortir-a-paris/spectacles/04/spectacle-cirque-du-soleil/thumbs-1180x525/spectacle-toruk.jpg" style="display: block; margin-right: auto; margin-left: auto; width: 200vh; height: 70vh;">
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand">Nos Spectacles</a>
+    </nav>
+    <table style="margin: 0 auto; background-color: #1d2124" class="table">
+        <tbody>
+        <tr style="color: #00bb00;">
+            {% for show in shows %}
+            <td>{{ show.place }}</td>
+            <td>{{ show.date|date("d/m/Y") }}</td>
+            <td><a href="/ticket/{{ show.id }}"><button class="btn btn-success">Achetez</button></a></td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

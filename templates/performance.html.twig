@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <img src="https://cdn.shopify.com/s/files/1/0042/4852/files/Aircraft_GCF18-00084.jpg?v=1560359549" style="display: block; margin-right: auto; margin-left: auto; width: 200vh; height: 70vh;">
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand">Les numéros</a>
+    </nav>
+    <div class="row">
+        {% for performance in performances %}
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ performance.picture }}" class="card-img-top" alt="performance">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ performance.name }}</h5>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}

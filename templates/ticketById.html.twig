@@ -10,16 +10,17 @@
                 </div>
             {% endfor %}
         {% endfor %}
-{{ form_start(ticketForm) }}
-    {{ form_errors(ticketForm) }}
-    {{ form_row(ticketForm.firstName) }}
-    {{ form_row(ticketForm.lastName) }}
-    {{ form_row(ticketForm.email) }}
-    {{ form_row(ticketForm.age1) }}
-    {{ form_row(ticketForm.age2) }}
-    {{ form_row(ticketForm.age3) }}
-    {{ form_row(ticketForm.showPlace) }}
-    {{ form_row(ticketForm.showDate) }}
+        <h6 style="text-align: center">Numéro présentez lors du spectacle: {{ performances.name }}</h6>
+        {{ form_start(ticketForm) }}
+        {{ form_errors(ticketForm) }}
+        {{ form_row(ticketForm.firstName) }}
+        {{ form_row(ticketForm.lastName) }}
+        {{ form_row(ticketForm.email) }}
+        {{ form_row(ticketForm.age1) }}
+        {{ form_row(ticketForm.age2) }}
+        {{ form_row(ticketForm.age3) }}
+        {{ form_row(ticketForm.showPlace) }}
+        {{ form_row(ticketForm.showDate) }}
     </div>
     <div style="display: flex; justify-content: center;">
         <button class="btn btn-success" type="submit">Envoyé</button>

@@ -1,0 +1,6 @@
+easy_admin:
+    entities:
+      Performance:
+        class: App\Entity\Performance
+      Show:
+        class: App\Entity\Showw
