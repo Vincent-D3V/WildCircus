@@ -28,15 +28,15 @@ class TicketFormType extends AbstractType
                 'required' => true,
             ])
             ->add("age1", CheckboxType::class, [
-                'label' => '-12 ans',
+                'label' => '-12 ans (5$)',
                 'required'   => false,
             ])
             ->add("age2", CheckboxType::class, [
-                'label' => 'Entre 12 et 16 ans',
+                'label' => 'Entre 12 et 16 ans (10$)',
                 'required'   => false,
             ])
             ->add("age3", CheckboxType::class, [
-                'label' => 'Plus de 16 ans',
+                'label' => 'Plus de 16 ans (15$)',
                 'required'   => false,
             ])
             ->add("showDate", DateType::class, [
